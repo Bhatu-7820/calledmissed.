@@ -8,7 +8,7 @@ const generateId = () => Math.random().toString(36).substring(2, 15) + Math.rand
 const DEFAULT_CONFIG: AppConfig = {
   temperature: 0.7,
   systemPrompt: "You are CallMissed AI Assistant, a helpful, advanced, and expert AI companion.",
-  theme: 'dark'
+  theme: 'light'
 };
 
 export function useChat() {
