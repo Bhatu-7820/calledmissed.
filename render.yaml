@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: callmissed-ai-assistant
+    runtime: node
+    buildCommand: npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NODE_ENV
+        value: production
+      - key: CM_API_KEY
+        sync: false
+        description: "Primary CallMissed API Key"
+      - key: ALT_API_KEY
+        sync: false
+        description: "Google Gemini API Key starting with AQ."
+      - key: GROQ_API_KEY
+        sync: false
+        description: "Alternative Groq API Key"
+      - key: MONGODB_URI
+        sync: false
+        description: "MongoDB Atlas Connection String (with password)"
